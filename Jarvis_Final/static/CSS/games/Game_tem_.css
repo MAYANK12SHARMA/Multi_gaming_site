@@ -1,0 +1,253 @@
+p {
+	font-size: 15px;
+	font-family: "Mulish", sans-serif;
+	color: #3d3d3d;
+	font-weight: 400;
+	line-height: 25px;
+	margin: 0 0 15px 0;
+}
+#games-section{
+	padding-bottom: 100px;
+}
+
+.games{
+	background: #181a1e;
+	padding-top: 100px;
+	padding-bottom: 100px;
+    z-index: 50;
+}
+
+img {
+	max-width: 100%;
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+	outline: none;
+	color: #ffffff;
+}
+
+ul,
+ol {
+	padding: 0;
+	margin: 0;
+}
+
+.anime-details {
+	padding-top: 60px;
+    margin-bottom: 50px;
+}
+
+.anime__details__content {
+	margin-bottom: 55px;
+}
+
+.anime__details__text {
+	position: relative;
+}
+
+.anime__details__text p {
+	color: #b7b7b7;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.anime__details__pic {
+	height: 440px;
+	border-radius: 5px;
+	position: relative;
+}
+
+.anime__details__pic .comment {
+	font-size: 13px;
+	color: #ffffff;
+	background: #3d3d3d;
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 4px;
+	position: absolute;
+	left: 10px;
+	bottom: 25px;
+}
+
+.anime__details__pic .view {
+	font-size: 13px;
+	color: #ffffff;
+	background: #3d3d3d;
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 4px;
+	position: absolute;
+	right: 10px;
+	bottom: 25px;
+}
+
+.anime__details__title {
+	margin-bottom: 20px;
+}
+
+.anime__details__title h3 {
+	color: #ffffff;
+	font-weight: 700;
+	margin-bottom: 13px;
+}
+
+.anime__details__title span {
+	font-size: 15px;
+	color: #b7b7b7;
+	display: block;
+}
+
+.anime__details__rating {
+	text-align: center;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.anime__details__rating .rating i {
+	font-size: 24px;
+	color: #e89f12;
+	display: inline-block;
+}
+
+.anime__details__rating span {
+	display: block;
+	font-size: 18px;
+	color: #b7b7b7;
+}
+
+.anime__details__widget {
+	margin-bottom: 15px;
+}
+
+.anime__details__widget ul {
+	margin-bottom: 20px;
+}
+
+.anime__details__widget ul li {
+	list-style: none;
+	font-size: 15px;
+	color: #ffffff;
+	line-height: 30px;
+	position: relative;
+	padding-left: 18px;
+}
+
+.anime__details__widget ul li:before {
+	position: absolute;
+	left: 0;
+	top: 12px;
+	height: 6px;
+	width: 6px;
+	background: #b7b7b7;
+	content: "";
+}
+
+.anime__details__widget ul li span {
+	color: #b7b7b7;
+	width: 115px;
+	display: inline-block;
+}
+.anime__details__btn{
+	display: flex;
+}
+.anime__details__btn .follow-btn {
+	font-size: 13px;
+	color: #ffffff;
+	display: inline-block;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	padding: 2px 20px;
+	border-radius: 4px;
+	margin-right: 11px;
+}
+
+
+
+.anime__details__btn .watch-btn span {
+	font-size: 13px;
+	color: #ffffff;
+	background: #d97014;
+	display: inline-block;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	padding: 14px 20px;
+	border-radius: 4px 0 0 4px;
+	margin-right: 1px;
+}
+
+.anime__details__btn .watch-btn i {
+	font-size: 20px;
+	display: inline-block;
+	background: #d97014;
+	padding: 11px 5px 16px 8px;
+	color: #ffffff;
+	border-radius: 0 4px 4px 0;
+}
+
+.how_to_play .heading_play h1{
+	color: white;
+	font-size: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.how_to_play .content{
+	color: rgb(202, 202, 202);
+	font-size: 20px;
+	line-height: 35px;
+}
+
+.how_to_play .content .heading_para h2{
+	color: white;
+	font-size: 25px;
+	margin-left: 17px;
+}
+
+.how_to_play .content .heading_para{
+	color: white;
+	font-size: 25px;
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+
+.headin_para1{
+	content: ''; /* Required for pseudo-elements */
+	position: absolute;
+	width: 9px; /* Adjust the width of the line */
+	height: 28px; /* Make the line as tall as the heading */
+	background-color: #b76435; /* Change the color of the line */
+	left: auto; /* Adjust the horizontal position of the line */
+  }
+
+
+.list-container {
+	display: flex;
+	align-items: flex-start;
+}
+.list {
+    flex: 1;
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+.image {
+    flex-shrink: 0; /* Prevent image from shrinking */
+	margin-left: 20px;
+    max-width: 500px; /* Set maximum width to prevent image from overflowing container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+.details_of_play{
+	margin:0 150px;
+}

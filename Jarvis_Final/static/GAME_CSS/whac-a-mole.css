@@ -1,0 +1,81 @@
+
+body {
+    font-family: cursive, Helvetica, Red sans-serif;
+    text-align: center;
+    background: url("../GAME_IMAGES/whac-a-mole_Image1.avif");
+    background-size: cover;
+}
+
+
+h1{
+    font-size:60px;
+    background: linear-gradient(blue,purple,orangered);
+    color:rgb(249, 210, 135);
+    margin-left:450px;
+    margin-right:450px;
+    border-radius: 20px;
+    border:solid 8px aquamarine
+
+}
+#score-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#score {
+    margin-right: 20px;
+}
+
+#restartBtn {
+    margin: 10px 65px;
+    padding: 1px 18px;
+    background: #d9b3e9;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 33px;
+    font-weight: bolder;
+    box-shadow: 7px 8px 16px 0px rgba(77, 6, 109, 0.5);
+    transition: background-color 0.5s, transform 0.6s;
+    margin-bottom: 20px;
+
+}
+
+#restartBtn:hover {
+    background-color: #a6ea66;
+    box-shadow: 7px 8px 16px 0px rgba(0, 0, 0, 0.5);
+}
+
+#restartBtn:active{
+    transform: scaleY(0.15) scaleX(0.77);
+    background-color: rgb(122, 225, 225);
+}
+
+#board {
+    width: 540px;
+    height: 540px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-size: cover;
+    border: 6px double white;
+    border-radius: 25px;
+}
+
+#board div {
+    width: 180px; 
+    height: 180px;
+    background-image: url("../GAME_IMAGES/whac-a-mole_Image2.png");
+    background-size: cover;
+}
+
+#board div img {
+    width: 100px;
+    height: 100px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+} 

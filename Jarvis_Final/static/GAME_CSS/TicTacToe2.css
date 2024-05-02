@@ -1,0 +1,123 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../GAME_IMAGES/Purple.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+.game-container pre{
+    background-color: rgb(108, 8, 108); /* Color for Tic Tac Toe */
+    color: rgb(232, 208, 208);
+    height: 100px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    padding: 0 12px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 50px;
+}
+
+.message-container pre{
+    background-color: rgb(231, 100, 231); /* Color for Tic Tac Toe */
+    color: rgb(122, 6, 122);
+    height: 160px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    padding: 0 12px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 120px;
+}
+
+.input-container {
+    background-color: rgb(249, 181, 249); /* Color for player input */
+    color: rgb(232, 208, 208);
+    height: 210px; /* Adjust height as needed */
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 50px;
+}
+
+#player2{
+    font-size: 60px;
+    margin-left: 250px;
+    color: rgb(246, 49, 157);
+}
+
+#player1{
+    font-size: 60px;
+    color: rgb(246, 49, 157);
+}
+
+#input_player1{
+    font-size: 30px;
+    color: rgb(164, 90, 214);
+}
+
+#input_player2{
+    font-size: 30px;
+    color: rgb(164, 90, 214);
+}
+
+.players {
+    margin-bottom: 50px;
+}
+
+.players input[type="text"] {
+    width: 250px;
+    padding: 10px;
+    border: 2px solid rgb(133, 100, 100);
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(194, 21, 228);
+    background-color: rgb(249, 181, 249);
+    font-weight: bolder;
+}
+
+.players input[type="text"]::placeholder {
+    color: rgba(33, 30, 30, 0.7);
+    font-weight: bolder;
+}
+
+.players label {
+    margin-right: 20px;
+}
+
+button {
+    margin: 40px;
+    padding: 10px 30px;
+    background: #e733ea;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 33px;
+    font-weight: bolder;
+    font-style: italic;
+    box-shadow: 7px 8px 16px 0px rgba(205, 80, 216, 0.815);
+    transition: background-color 0.5s, transform 0.6s;
+    margin-left: 1200px;
+}
+
+button:hover {
+    background-color: #c32ee5;
+    box-shadow: 7px 8px 16px 0px rgba(192, 83, 202, 0.861);
+}
+
+button:active {  
+    transform: scaleY(0.15) scaleX(0.77);
+}

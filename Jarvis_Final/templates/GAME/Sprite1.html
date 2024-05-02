@@ -1,0 +1,79 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprite Flight</title>
+    <link rel="stylesheet" href="{% static '/GAME_CSS/Sprite1.css' %}"/>
+
+    <script>
+        window.onload = function() {
+            document.body.style.zoom = "100%";
+        };
+    </script>
+
+</head>
+<body>
+<canvas id='canvas1'></canvas>
+
+<img id='player' src="{% static '/GAME_IMAGES/SpriteSheet.png' %}"> 
+<img id='life' src="{% static '/GAME_IMAGES/life.png' %}">
+<img id='layer5' src="{% static '/GAME_IMAGES/layer-5 (1).png' %}">
+<img id='layer4' src="{% static '/GAME_IMAGES/layer-4 (1).png' %}">
+<img id='layer3' src="{% static '/GAME_IMAGES/layer-3 (1).png' %}">
+<img id='layer2' src="{% static '/GAME_IMAGES/layer-2 (1).png' %}">
+<img id='layer1' src="{% static '/GAME_IMAGES/layer-1 (1).png' %}"> 
+<img id='enemy_fly' src="{% static '/GAME_IMAGES/enemy_fly.png' %}">
+<img id='enemy_plant' src="{% static '/GAME_IMAGES/enemy_plant.png' %}">
+<img id='enemy_spider_big' src="{% static '/GAME_IMAGES/enemy_spider_big.png' %}">
+<img id='fire' src="{% static '/GAME_IMAGES/fire.png' %}">
+<img id='boom' src="{% static '/GAME_IMAGES/boom.png' %}">
+
+<div class="trademark-container">
+    <p>J.A.R.V. I.S A. &#8482;</p>
+</div>
+
+<audio id="audioPlayer" autoplay loop>
+    <source src="{% static '/GAME_SOUNDS/Cricket Sounds.mp3' %}" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<audio id="dizzy">
+    <source src="{% static '/GAME_SOUNDS/Dizzy.mp3' %}" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<audio id="groundSmash"> 
+    <source src="{% static '/GAME_SOUNDS/groundSmash.mp3' %}" type="audio/mpeg">
+    Your browser does not support the audio element. 
+</audio>
+<audio id="jump" controls style="display:none;"> 
+    <source src="{% static 'GAME_SOUNDS/jump.mp3' %}" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<audio id="normalHit" controls style="display:none;">
+    <source src="{% static 'GAME_SOUNDS/normalHit.mp3' %}" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+
+<button id = "playButton" onclick="playMusic()">Play with Music</button>
+
+<button id="resetButton" onclick="refreshPage()">Reset Game</button>
+
+<script type='module' src='{% static "GAME_JS/mainScript.js" %}'></script>
+<button onclick="refreshPage()">Refresh Page</button>
+
+    <script>
+        function refreshPage() {
+            location.reload();
+        }
+    </script>
+
+</body>
+</html> 

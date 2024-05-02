@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 39;
+}
+
+.player-names pre{
+    background-color: rgb(108, 8, 108);
+    color: rgb(232, 208, 208);
+    height: 100px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+} 
+
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    background-color: #c0e7ec;
+    padding: 13px;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 12vw);
+    grid-template-columns: repeat(3, 12vw);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgb(232, 223, 240);
+}
+
+.info {
+    font-size: 34px;
+    margin: 10px 45px;
+}
+
+.gameInfo{
+    padding: 25px 100px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset {
+    margin: 10px 65px;
+    padding: 1px 18px;
+    background: #d9b3e9;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 33px;
+    font-weight: bolder;
+    box-shadow: 7px 8px 16px 0px rgba(77, 6, 109, 0.5);
+    transition: background-color 0.5s, transform 0.6s;
+}
+
+#reset:hover {
+    background-color: #a6ea66;
+    box-shadow: 7px 8px 16px 0px rgba(0, 0, 0, 0.5);
+}
+
+#reset:active{
+    transform: scaleY(0.15) scaleX(0.77);
+}
+
+.line{
+    background-color: black;
+    height: 5px;  /* viewport height */
+    width: 0px;  /* viewport width */ 
+    position: absolute; 
+    background-color: #c844b6;
+    transform: translate(6vw, 18vw) rotate(90deg);
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px) 
+/* At 950px, a media query hits which changes the page's dimensions according to screen size */
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container { 
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}

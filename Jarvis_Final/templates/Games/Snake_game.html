@@ -1,0 +1,143 @@
+{% extends 'Games/base.html' %}
+
+
+{% load static %}
+
+
+{% block css %}
+
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="{% static 'CSS/games/Game_tem_.css' %}">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.dropdown-toggle').dropdown();
+    });
+</script>
+{% endblock css %}
+
+
+
+
+{% block content %}
+<div class="section-wrapper" id="games-section"
+    style="background: url('{% static '/media/Games/bg1.jpg' %}') no-repeat; background-size: cover; background-position: center;">
+
+    <section class="anime-details spad">
+        <div class="container">
+            <div class="anime__details__content">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="anime__details__pic">
+                            <img src="image/snake.png" class="anime__details__pic">
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="anime__details__text">
+                            <div class="anime__details__title">
+                                <h3>Snake Game</h3>
+                                <span>"Slither, evade, and grow your way to the top in the classic Snake game!"</span>
+                            </div>
+                            <p style="margin-bottom: 50px;">Ready to slither, devour, and dominate the leaderboard? Gear
+                                up, strategize your moves, and embark on the ultimate journey in Snake. Unleash your
+                                inner serpent and conquer the challenge now!</p>
+                            <div class="anime__details__widget">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <ul>
+                                            <li><span>Studios:</span> By Vaishvik Sharma</li>
+                                            <li><span>Date Launched:</span> Feb, 2024</li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <ul>
+                                            <li><span>Status:</span> Airing</li>
+                                            <li><span>Genre:</span> Action, Adventure</li>
+                                            <!-- <li><span>Scores:</span> ???</li>
+                                            <li><span>Rating:</span> 8.5</li>
+                                            <li><span>Views:</span> 131,541</li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="anime__details__btn">
+                                <a href="https://github.com/vaishviksharma/SNAKE-AND-FOOD-GAME}" class="follow-btn" ><button class="btn btn-primary"> Download <i
+                                            class='bx bxs-download'></i></button></a>
+                                <a href="{% url 'snake' %}" class="follow-btn"><button class="btn btn-primary">Play
+                                        Now</button></a>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="details_of_play">
+        <!-- Here is going to be the details about how to play  -->
+        <h1 style="color: aliceblue; font-size: 40px; text-align: center; margin-bottom: 60px; margin-top: 100px;">
+            Instructions and Rules
+            <hr>
+        </h1>
+
+        <div class="how_to_play">
+
+
+            <div class="content">
+                <div class="heading_para">
+                    <span class="headin_para1"></span>
+                    <h2>Objective:</h2>
+                </div>
+
+                <ul>
+                    <li>Control the snake to consume as many balls as possible without colliding with the walls or
+                        itself.
+                    </li>
+                </ul>
+
+                <div class="heading_para">
+                    <span class="headin_para1"></span>
+                    <h2>Controls:</h2>
+                </div>
+
+                <div class="list-container">
+                    <ul class="list">
+                        <li>Use the <strong>arrow keys</strong> to change the direction of the snake's movement.</li>
+                    </ul>
+                </div>
+
+
+                <div class="heading_para">
+                    <span class="headin_para1"></span>
+                    <h2>Gameplay:</h2>
+                </div>
+
+                <div class="list-container">
+                    <ul class="list">
+                        <li>Guide the snake to move around the game board.</li>
+                        <li>As the snake consumes balls, it grows longer.</li>
+                        <li>Avoid colliding with the walls or the snake's own body.</li>
+                        <li>Keep consuming balls to score points and increase the snake's length.</li>
+                        <li>Survive as long as possible and aim for the highest score!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</div>
+
+
+{% endblock %}

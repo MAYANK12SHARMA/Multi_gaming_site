@@ -1,0 +1,518 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarvis Arena</title>
+
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"> -->
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <style>
+        .swal-html {
+            font-size: 27px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            width: 460px;
+        }
+
+        .swal-title {
+            font-size: 40px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            width: 480px;
+
+        }
+
+        .swal-button {
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .swal-container {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body id="top">
+
+
+    <!--?    ----------------------------------------- Navabr -------------------------------------------------  -->
+
+    <header class="headers1">
+        <div class="overlay" data-overlay></div>
+        <div class="containers1">
+            <a href="#" class="logo">
+                <div class="box">
+                    <div class="lightbar"></div>
+                    <div class="toplayer"></div>
+                    <h2 class="jar">Jarvis Arena</h2>
+                </div>
+            </a>
+            <button class="nav-open-btn" data-nav-open-btn>
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+            <nav class="navbars1" data-nav>
+                <div class="navbars1-top">
+                    <a href="#" class="logo">
+                        <img src="{% static 'images/logo.svg' %}" alt="GameX logo">
+                    </a>
+                    <button class="nav-close-btn" data-nav-close-btn>
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+                </div>
+                <ul class="navbars1-list">
+                    <li>
+                        <a href="#top" class="navbars1-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#games-section" class="navbars1-link">Services</a>
+                    </li>
+                    <li>
+                        <a href="" class="navbars1-link">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="#team-section" class="navbars1-link">Team</a>
+                    </li>
+                    <li>
+                        <a href="services/contact_us" class="navbars1-link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="headers1-actions">
+                <button class="search"></button>
+                {% if user.is_authenticated %}
+                <button class="btn-sign_in">
+                    <div class="icon-box">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                    </div>
+                    <span>{{ user.username }}</span>
+                </button>
+                <button class="btn-sign_in log">
+                    <div class="icon-box">
+                        <ion-icon name="log-in-outline"></ion-icon>
+                    </div>
+                    <span><a href="{% url 'logout' %}">Log out</a></span>
+                </button>
+
+                {% else %}
+
+                <button class="btn-sign_in reg">
+                    <div class="icon-box">
+                        <ion-icon name="log-in-outline"></ion-icon>
+                    </div>
+                    <span><a href="{% url 'register_attempt' %}">Register</a></span>
+                </button>
+                <button class="btn-sign_in log">
+                    <div class="icon-box">
+                        <ion-icon name="log-in-outline"></ion-icon>
+                    </div>
+                    <span><a href="{% url 'login_attempt' %}">Log-in</a></span>
+                </button>
+                {% endif %}
+            </div>
+
+        </div>
+    </header>
+
+    <!--!    ----------------------------------------- Navabr -------------------------------------------------  -->
+
+
+    <!--?    ----------------------------------------- Crousal -------------------------------------------------  -->
+
+    <div class="section-wrapper" style="background: url('{% static '/media/section-wrapper-bg.jpg' %}') no-repeat; background-size: cover; background-position: center; padding-top: 50px;">
+        <div class="carousel">
+            <div class="list">
+                <!-- Items -->
+                <div class="list">
+                    <div class="item">
+                        <img src="{% static 'media/index_images/img1.png' %}">
+                        <div class="content">
+
+                            <div class="title">INTERACTIVE </div>
+                            <div class="topic">GAMING GALORE!</div>
+                            <div class="des">
+                                Unleash the power of JavaScript and Python with our captivating games. Whether you're a
+                                seasoned
+                                gamer or just starting your journey, our platform offers an array of interactive
+                                experiences
+                                that will keep you hooked. Download your favorites to play offline or dive into instant
+                                gaming
+                                gratification online. With a seamless user experience and a diverse range of games,
+                                there's
+                                never been a better time to explore the world of gaming with us.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'media/index_images/img3.jpg' %}">
+                        <div class="content">
+
+                            <div class="title">PLAY ANYWHERE</div>
+                            <div class="topic">ANYTIME!</div>
+                            <div class="des">
+                                Discover a world of gaming innovation and creativity within our community. With a
+                                diverse
+                                range
+                                of games to explore and a developer-friendly environment, there's no limit to what you
+                                can
+                                achieve. Whether you're a coding enthusiast looking to bring your ideas to life or
+                                simply
+                                seeking fresh and engaging content, our platform offers the perfect blend of inspiration
+                                and
+                                entertainment. Join us and let your imagination run wild!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'media/index_images/img5.png' %}">
+                        <div class="content">
+
+                            <div class="title">JOIN THE</div>
+                            <div class="topic">FUN!</div>
+                            <div class="des">
+                                Welcome to the ultimate destination for gaming enthusiasts! Dive into a universe of
+                                excitement
+                                where every player finds their perfect match. From classic favorites to the latest
+                                releases,
+                                our
+                                platform caters to all tastes and preferences. But it's not just about the games – it's
+                                about
+                                the community. Join our vibrant and inclusive network of gamers, share your experiences,
+                                and
+                                embark on thrilling adventures together. The fun awaits – are you ready to join us?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'media/index_images/img4.jpg' %}">
+                        <div class="content">
+
+                            <div class="title">UNLEASH YOUR</div>
+                            <div class="topic">CREATIVITY!</div>
+                            <div class="des">
+                                Discover a world of gaming innovation and creativity within our community. With a
+                                diverse
+                                range
+                                of games to explore and a developer-friendly environment, there's no limit to what you
+                                can
+                                achieve. Whether you're a coding enthusiast looking to bring your ideas to life or
+                                simply
+                                seeking fresh and engaging content, our platform offers the perfect blend of inspiration
+                                and
+                                entertainment. Join us and let your imagination run wild!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="thumbnail">
+                <!-- Thumbnails -->
+                <div class="item">
+                    <img src="{% static 'media/index_images/img1.png' %}">
+                    <div class="content">
+                        <div class="title">
+                            Interactive Gaming Galore!
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'media/index_images/img3.jpg' %}">
+                    <div class="content">
+                        <div class="title">
+                            Play Anywhere, Anytime!
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'media/index_images/img5.png' %}">
+                    <div class="content">
+                        <div class="title">
+                            Join the Fun!
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'media/index_images/img4.jpg' %}">
+                    <div class="content">
+                        <div class="title">
+                            Unleash Your Creativity!
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for other thumbnails -->
+            </div>
+            <div class="arrows">
+                <button id="prev">&lt;&lt;</button>
+                <button id="next">&gt;&gt;</button>
+            </div>
+            <div class="time"></div>
+        </div>
+    </div>
+
+    <!--!   ----------------------------------------- Crousal End -------------------------------------------------  -->
+
+
+    <!--?  -----------------------------------------Games -------------------------------------------------  -->
+
+    <main>
+        <div class="section-wrapper" id="games-section"
+            style="background: url('{% static '/media/section-wrapper-bg.jpg' %}') no-repeat; background-size: cover; background-position: center; padding-top: 50px;">
+            <h2 class="h2 section-title">Explore the variety of our games</h2>
+            <div class="card-upper">
+                <img src="{% static 'media/index_images/img6.jpg' %}" alt="Game image">
+                <h2>Play With Us</h2>
+                <a href="Games/allgames" class="button">
+                    <button class="btn btn-primary">Find out more</button>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!--! -----------------------------------------Games  End-------------------------------------------------  -->
+
+
+    <!--?  -----------------------------------------Upcoming  -------------------------------------------------  -->
+
+    <div class="section-wrapper" id="upcoming-section"
+        style="background: url('{% static '/media/section-wrapper-bg.jpg' %}') no-repeat; background-size: cover; background-position: center; padding-top: 50px;">
+        <h2 class="h2 section-title">Explore our upcoming Features</h2>
+        <div class="wrapper-feature">
+            <div class="container-feature">
+                <!-- Feature Cards -->              
+                
+                <input type="radio" name="slide" id="c1" checked>
+                <label for="c1" class="card-feature" style="background: url('{% static 'media/index_images/img6.jpg' %}') no-repeat;">
+                    <div class="row-feature">
+                        <div class="icon-feature">1</div>
+                        <div class="description-feature">
+                            <h4>Winter</h4>
+                            <p>Winter has so much to offer - creative activities</p>
+                        </div>
+                    </div>
+                </label>
+                
+                <input type="radio" name="slide" id="c2" checked>
+                <label for="c2" class="card-feature" style="background: url('{% static '/media/mayank.png' %}') no-repeat;">
+                    <div class="row-feature">
+                        <div class="icon-feature">2</div>
+                        <div class="description-feature">
+                            <h4>Winter</h4>
+                            <p>Winter has so much to offer - creative activities</p>
+                        </div>
+                    </div>
+                </label>
+                
+                <input type="radio" name="slide" id="c3" checked>
+                <label for="c3" class="card-feature" style="background: url('{% static 'media/index_images/img6.jpg' %}') no-repeat;">
+                    <div class="row-feature">
+                        <div class="icon-feature">3</div>
+                        <div class="description-feature">
+                            <h4>Winter</h4>
+                            <p>Winter has so much to offer - creative activities</p>
+                        </div>
+                    </div>
+                </label>
+                
+                
+                <!-- Repeat for other feature cards -->
+            </div>
+        </div>
+    </div>
+
+    <!--! -----------------------------------------Upcoming End -------------------------------------------------  -->
+
+
+    <!--?  -----------------------------------------Team  -------------------------------------------------  -->
+
+    <main>
+        <article>
+            <div class="section-wrapper" id="team-section"  style="background: url('{% static '/media/section-wrapper-bg.jpg' %}') no-repeat; background-size: cover; background-position: center; padding-top: 50px;">
+           
+            <section class="team" id="team">
+                <div class="containers1">
+                    <h2 class="h2 section-title">Active Team Members</h2>
+                    <ul class="team-list">
+                        <!-- Team Members -->
+                        <li>
+                            <a href="developer/arjun" class="team-member">
+                                <figure>
+                                    <img src="{% static 'media/developer_photo/arjun.jpeg' %}" alt="Team member image">
+                                </figure>
+                                <ion-icon name="link-outline"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="developer/mayank" class="team-member">
+                                <figure>
+                                    <img src="{% static 'media/developer_photo/photo1.png' %}" alt="Team member image">
+                                </figure>
+                                <ion-icon name="link-outline"></ion-icon>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="developer/jatin" class="team-member">
+                                <figure>
+                                    <img src="{% static 'media/developer_photo/jatin.jpg' %}" alt="Team member image">
+                                </figure>
+                                <ion-icon name="link-outline"></ion-icon>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="developer/garvit" class="team-member">
+                                <figure>
+                                    <img src="{% static 'media/developer_photo/garvit.png' %}" alt="Team member image">
+                                </figure>
+                                <ion-icon name="link-outline"></ion-icon>
+                            </a>
+                        </li>
+
+
+
+
+
+                        <li>
+                            <a href="developer/parth" class="team-member">
+                                <figure>
+                                    <img src="{% static 'media/developer_photo/parth.jpg' %}" alt="Team member image">
+                                </figure>
+                                <ion-icon name="link-outline"></ion-icon>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="developer/vaishvik" class="team-member">
+                                <figure>
+                                    <img src="{% static 'media/developer_photo/vaishvik.png' %}" alt="Team member image">
+                                </figure>
+                                <ion-icon name="link-outline"></ion-icon>
+                            </a>
+                        </li>
+                        <!-- Repeat for other team members -->
+                    </ul>
+                   <a href="services/contact_us"> <button class="btn btn-primary">Join us</button></a>
+                </div>
+            </section>
+            </div>
+        </article>
+    </main>
+
+    <!--! -----------------------------------------Team End -------------------------------------------------  -->
+
+
+    <!--?  -----------------------------------------Footer  -------------------------------------------------  -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container foo">
+            <div class="row foo">
+                <div class="footer-col">
+                    <h4>Get help</h4>
+                    <ul>
+                        <li><a href="{% url 'faq_download' %}">FAQ</a></li>
+                        <li><a href="{% url 'faq_download' %}">Download Games</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="{% url 'faq_download' %}">About us</a></li>
+                        <li><a href="{% url 'faq_download' %}">Our services</a></li>
+                        <li><a href="{% url 'faq_download' %}">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Developers</h4>
+                    <ul>
+                        <li><a href="developer/arjun">Arjun Singh</a></li>
+                        <li><a href="developer/garvit">Garvit Kedia</a></li>
+                        <li><a href="developer/jatin">Jatin Khetan</a></li>
+                        <li><a href="developer/mayank">Mayank Sharma</a></li>
+                        <li><a href="developer/parth">Parth Garg</a></li>
+                        <li><a href="developer/vaishvik">Vaishvik Sharma</a></li>
+                        <!-- Repeat for other developers -->
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links foo">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--! -----------------------------------------Footer End -------------------------------------------------  -->
+
+
+    <!-- ?  -----------------------------------------Go to top  -------------------------------------------------  -->
+
+    <a href="#top"  id="gotop"  class="btn btn-primary go-top" data-go-top>
+        <ion-icon  name="chevron-up-outline"></ion-icon>
+    </a>
+
+    <!--! -----------------------------------------Go to top end -------------------------------------------------  -->
+
+
+    <!-- ? -----------------------------------------Scripts  -------------------------------------------------  -->
+
+    <script src="{% static 'JS/script.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script>
+        {% if messages %}
+        {% for message in messages %}
+        Swal.fire({
+            title: '<div class="swal-title">{{ message.tags|capfirst }} </div>',
+            html: '<div class="swal-html">{{ message }} </div>',
+            icon: '{{ message.tags }}',
+            background: '#1c1e25',
+            color: 'white',
+            confirmButtonColor: '#272a34',
+            width: '500px',
+            iconColor: '#f39422',
+            confirmButtonText: '<div class="swal-button">OK</div>',
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+
+
+
+
+
+        });
+        {% endfor %}
+        {% endif %}
+
+    </script>
+
+    <!--! -----------------------------------------Scripts End -------------------------------------------------  -->
+
+
+</body>
+
+</html>

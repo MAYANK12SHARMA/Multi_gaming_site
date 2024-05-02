@@ -1,0 +1,650 @@
+{% extends 'Games/base.html' %}
+
+
+{% load static %}
+
+{% block content %}
+
+<!-- ?  -------------------------------------    Games List ------------------------------------------- -->
+
+
+<main>
+    <article>
+        <div class="section-wrapper" id="games-section"
+            style="background: url('{% static '/media/section-wrapper-bg.jpg' %}') no-repeat; background-size: cover; background-position: center; padding-top: 50px;">
+            <section class="gears" id="gears">
+                <div class="container">
+
+                    <h2 class="h2 section-title">check our Games</h2>
+
+
+
+                    <!-- <h3 class="h3 section-title">check our gears</h3> -->
+
+                    <ul class="gears-list">
+
+
+
+
+
+
+
+                        <li>
+                            <div class="gears-card">
+
+                                <div class="card-banner"
+                                    style="background: url('{% static '/media/Games/gears-card-bg.png' %}');">
+
+
+                                    <img src="{% static '/media/Game_logo/brickbreaker.avif' %}" alt="Break_breaker"
+                                        style="width: 350px; height: 300px; border-radius: 5%;
+            border: 1px solid white;" onmouseover="this.style.borderColor='red';"
+                                        onmouseout="this.style.borderColor='white';">
+
+                                    <button class="share" id="brick_breaker" style="background-color: transparent;"
+                                        onmouseover="this.style.backgroundColor='#181a1e';"
+                                        onmouseout="this.style.backgroundColor='transparent';">
+
+
+                                        <ion-icon name="share-social"></ion-icon>
+                                    </button>
+
+
+
+                                </div>
+
+                                <div class="card-content">
+
+                                    <div class="card-title-wrapper">
+
+                                        <h3 class="h3 card-title">Brick Breaker</h3>
+
+                                        <p class="card-subtitle">Acrade</p>
+
+                                    </div>
+
+                                    <div class="card-prize">by Vaishvik</div>
+
+                                </div>
+                                <a href="{% url 'Brick_breaker' %}" style="text-decoration: none;">
+
+                                    <div class="card-actions">
+
+                                        <button class="btn btn-primary" id="play">
+
+
+                                            <span>Explore Now</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+
+
+                        <li>
+                            <div class="gears-card">
+
+                                <div class="card-banner"
+                                    style="background: url('{% static '/media/Games/gears-card-bg.png' %}');">
+
+
+                                    <img src="{% static 'media/Game_logo/spaceinvader.jpg' %}" alt="Space_invader"
+                                        style="width: 350px; height: 300px; border-radius: 5%;
+            border: 1px solid white;" onmouseover="this.style.borderColor='red';"
+                                        onmouseout="this.style.borderColor='white';">
+
+
+
+
+                                    <button class="share" id="space_invader"
+                                        value="http://127.0.0.1:8000/Games/Space_invaders/"
+                                        style="background-color: transparent;"
+                                        onmouseover="this.style.backgroundColor='#181a1e';"
+                                        onmouseout="this.style.backgroundColor='transparent';">
+                                        <ion-icon name="share-social"></ion-icon>
+                                    </button>
+
+
+
+                                </div>
+
+                                <div class="card-content">
+
+                                    <div class="card-title-wrapper">
+
+                                        <h3 class="h3 card-title">Space Invader</h3>
+
+                                        <p class="card-subtitle">Shoot 'em up/arcade</p>
+
+                                    </div>
+
+                                    <div class="card-prize">by Garvit</div>
+
+                                </div>
+                                <a href="{% url 'Space_invaders' %}" style="text-decoration: none;">
+                                    <div class="card-actions">
+
+                                        <button class="btn btn-primary" id="play">
+
+
+                                            <span>Explore Now</span>
+                                        </button>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <div class="gears-card">
+
+                                <div class="card-banner"
+                                    style="background: url('{% static '/media/Games/gears-card-bg.png' %}');">
+
+
+                                    <img src="{% static '/media/Game_logo/snake.jpg' %}" alt="Snake_Game" style="width: 350px; height: 300px; border-radius: 5%;
+            border: 1px solid white;" onmouseover="this.style.borderColor='red';"
+                                        onmouseout="this.style.borderColor='white';">
+
+
+                                    <button class="share" id="snake_game"
+                                        value="http://127.0.0.1:8000/Games/Snake_game/"
+                                        style="background-color: transparent;"
+                                        onmouseover="this.style.backgroundColor='#181a1e';"
+                                        onmouseout="this.style.backgroundColor='transparent';">
+                                        <ion-icon name="share-social"></ion-icon>
+                                    </button>
+
+
+
+                                </div>
+
+                                <div class="card-content">
+
+                                    <div class="card-title-wrapper">
+
+                                        <h3 class="h3 card-title">Snake Game</h3>
+
+                                        <p class="card-subtitle">Arcade</p>
+
+                                    </div>
+
+                                    <div class="card-prize">by Vaishvik</div>
+
+                                </div>
+                                <a href="{% url 'Snake_game' %}" style="text-decoration: none;">
+
+                                    <div class="card-actions">
+
+                                        <button class="btn btn-primary" id="play">
+
+
+                                            <span>Explore Now</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+
+
+                    <ul class="gears-list">
+
+                        <li>
+                            <div class="gears-card">
+
+                                <div class="card-banner"
+                                    style="background: url('{% static '/media/Games/gears-card-bg.png' %}');">
+
+
+                                    <img src="{% static '/media/Game_logo/carracing.jpg' %}" alt="car_racing" style="width: 350px; height: 300px; border-radius: 5%;
+            border: 1px solid white;" onmouseover="this.style.borderColor='red';"
+                                        onmouseout="this.style.borderColor='white';">
+
+
+                                    <button class="share" id="car_racing" value=""
+                                        style="background-color: transparent;"
+                                        onmouseover="this.style.backgroundColor='#181a1e';"
+                                        onmouseout="this.style.backgroundColor='transparent';">
+                                        <ion-icon name="share-social"></ion-icon>
+                                    </button>
+
+
+
+                                </div>
+
+                                <div class="card-content">
+
+                                    <div class="card-title-wrapper">
+
+                                        <h3 class="h3 card-title">Car Racing</h3>
+
+                                        <p class="card-subtitle">Racing</p>
+
+                                    </div>
+
+                                    <div class="card-prize">by Garvit</div>
+
+                                </div>
+                                <a href="{% url 'Car_racing' %}" style="text-decoration: none;">
+
+                                    <div class="card-actions">
+
+                                        <button class="btn btn-primary" id="play">
+
+
+                                            <span>Explore Now</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <div class="gears-card">
+
+                                <div class="card-banner"
+                                    style="background: url('{% static '/media/Games/gears-card-bg.png' %}');">
+
+
+                                    <img src="{% static '/media/Game_logo/maze.jpg' %}" alt="Maze_solver" style="width: 350px; height: 300px; border-radius: 5%;
+            border: 1px solid white;" onmouseover="this.style.borderColor='red';"
+                                        onmouseout="this.style.borderColor='white';">
+
+
+                                    <button class="share" id="maze_solver" value=""
+                                        style="background-color: transparent;"
+                                        onmouseover="this.style.backgroundColor='#181a1e';"
+                                        onmouseout="this.style.backgroundColor='transparent';">
+                                        <ion-icon name="share-social"></ion-icon>
+                                    </button>
+
+
+
+                                </div>
+
+                                <div class="card-content">
+
+                                    <div class="card-title-wrapper">
+
+                                        <h3 class="h3 card-title">Maze Solver</h3>
+
+                                        <p class="card-subtitle">Puzzle</p>
+
+                                    </div>
+
+                                    <div class="card-prize">by Arjun</div>
+
+                                </div>
+                                <a href="{% url 'Maze_solver' %}" style="text-decoration: none;">
+
+                                    <div class="card-actions">
+
+                                        <button class="btn btn-primary" id="play">
+
+
+                                            <span>Explore Now</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <div class="gears-card">
+
+                                <div class="card-banner"
+                                    style="background: url('{% static '/media/Games/gears-card-bg.png' %}');">
+
+
+                                    <img src="{% static '/media/Game_logo/goace.jpeg' %}" alt="Go_ace" style="width: 350px; height: 300px; border-radius: 5%;
+            border: 1px solid white;" onmouseover="this.style.borderColor='red';"
+                                        onmouseout="this.style.borderColor='white';">
+
+                                    <button class="share" id="go_ace" value="" style="background-color: transparent;"
+                                        onmouseover="this.style.backgroundColor='#181a1e';"
+                                        onmouseout="this.style.backgroundColor='transparent';">
+                                        <ion-icon name="share-social"></ion-icon>
+                                    </button>
+
+
+
+                                </div>
+
+                                <div class="card-content">
+
+                                    <div class="card-title-wrapper">
+
+                                        <h3 class="h3 card-title">Go Ace</h3>
+
+                                        <p class="card-subtitle">Luck</p>
+
+                                    </div>
+
+                                    <div class="card-prize">by Garvit</div>
+
+                                </div>
+                                <a href="{% url 'Go_ace' %}" style="text-decoration: none;">
+
+                                    <div class="card-actions">
+
+                                        <button class="btn btn-primary" id="play">
+
+
+                                            <span>Explore Now</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <ul class="gears-list">
+
+                        <li>
+                            <div class="gears-card">
+
+                                <div class="card-banner"
+                                    style="background: url('{% static '/media/Games/gears-card-bg.png' %}');">
+
+
+                                    <img src="{% static '/media/Game_logo/flappy.jpg' %}" alt="Flappy_bird" style="width: 350px; height: 300px; border-radius: 5%;
+            border: 1px solid white;" onmouseover="this.style.borderColor='red';"
+                                        onmouseout="this.style.borderColor='white';">
+
+
+                                    <button class="share" id="flappy_bird" value=""
+                                        style="background-color: transparent;"
+                                        onmouseover="this.style.backgroundColor='#181a1e';"
+                                        onmouseout="this.style.backgroundColor='transparent';">
+
+                                        <ion-icon name="share-social"></ion-icon>
+                                    </button>
+
+
+
+                                </div>
+
+                                <div class="card-content">
+
+                                    <div class="card-title-wrapper">
+
+                                        <h3 class="h3 card-title">Flappy Bird</h3>
+
+                                        <p class="card-subtitle"> Endless Runner</p>
+
+                                    </div>
+
+                                    <div class="card-prize">by Parth</div>
+
+                                </div>
+                                <a href="{% url 'Flappy_Bird' %}" style="text-decoration: none;">
+
+                                    <div class="card-actions">
+
+                                        <button class="btn btn-primary" id="play">
+
+
+                                            <span>Explore Now</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                        <li>
+                            <div class="gears-card">
+
+                                <div class="card-banner"
+                                    style="background: url('{% static '/media/Games/gears-card-bg.png' %}');">
+
+                                    <a href="">
+                                        <img src="{% static '/media/Game_logo/sprite_flight.png' %}"
+                                            alt="sprite_flight">
+
+                                    </a>
+
+                                    <button class="share" id="sprite_flight"
+                                        value="http://127.0.0.1:8000/Games/Sprite_flight/"
+                                        style="background-color: transparent;"
+                                        onmouseover="this.style.backgroundColor='#181a1e';"
+                                        onmouseout="this.style.backgroundColor='transparent';">
+                                        <ion-icon name="share-social"></ion-icon>
+                                    </button>
+
+
+
+
+                                </div>
+
+                                <div class="card-content">
+
+                                    <div class="card-title-wrapper">
+
+                                        <h3 class="h3 card-title">Sprite Flight</h3>
+
+                                        <p class="card-subtitle">Adventure</p>
+
+                                    </div>
+
+                                    <div class="card-prize">by Arjun</div>
+
+                                </div>
+                                <a href="{% url 'Sprite_flight' %}" style="text-decoration: none;">
+                                    <div class="card-actions">
+
+                                        <button class="btn btn-primary" id="play">
+
+
+                                            <span>Explore Now</span>
+                                        </button>
+
+
+                                    </div>
+                                </a>
+
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <div class="gears-card">
+
+                                <div class="card-banner"
+                                    style="background: url('{% static '/media/Games/gears-card-bg.png' %}');">
+
+
+                                    <img src="{% static '/media/Game_logo/tictactoe.webp' %}" alt="Tic_tac_toe" style="width: 350px; height: 300px; border-radius: 5%;
+            border: 1px solid white;" onmouseover="this.style.borderColor='red';"
+                                        onmouseout="this.style.borderColor='white';">
+
+                                    <button class="share" id="tic_tac_toe" value=""
+                                        style="background-color: transparent;"
+                                        onmouseover="this.style.backgroundColor='#181a1e';"
+                                        onmouseout="this.style.backgroundColor='transparent';">
+                                        <ion-icon name="share-social"></ion-icon>
+                                    </button>
+
+
+
+                                </div>
+
+                                <div class="card-content">
+
+                                    <div class="card-title-wrapper">
+
+                                        <h3 class="h3 card-title">Tic Tac Toe</h3>
+
+                                        <p class="card-subtitle"> Puzzle/Board</p>
+
+                                    </div>
+
+                                    <div class="card-prize">by Arjun</div>
+
+                                </div>
+                                <a href="{% url 'Tic_Tac_toe' %}" style="text-decoration: none;">
+                                    <div class="card-actions">
+
+                                        <button class="btn btn-primary" id="play">
+
+
+                                            <span>Explore Now</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                    <ul class="gears-list">
+
+
+
+
+
+                        <li>
+                            <div class="gears-card">
+
+                                <div class="card-banner"
+                                    style="background: url('{% static '/media/Games/gears-card-bg.png' %}');">
+
+
+                                    <img src="{% static '/media/Game_logo/wach_a_mole.jpeg' %}" alt="wach_a_mole" style="width: 350px; height: 300px; border-radius: 5%;
+            border: 1px solid white;" onmouseover="this.style.borderColor='red';"
+                                        onmouseout="this.style.borderColor='white';">
+
+
+                                    <button class="share" id="wach_a_mole" value=""
+                                        style="background-color: transparent;"
+                                        onmouseover="this.style.backgroundColor='#181a1e';"
+                                        onmouseout="this.style.backgroundColor='transparent';">
+                                        <ion-icon name="share-social"></ion-icon>
+                                    </button>
+
+
+
+                                </div>
+
+                                <div class="card-content">
+
+                                    <div class="card-title-wrapper">
+
+                                        <h3 class="h3 card-title">Whac A Mole</h3>
+
+                                        <p class="card-subtitle">Arcade</p>
+
+                                    </div>
+
+                                    <div class="card-prize">by Parth</div>
+
+                                </div>
+                                <a href="{% url 'Wach_a_mole' %}" style="text-decoration: none;">
+                                    <div class="card-actions">
+
+                                        <button class="btn btn-primary" id="play">
+
+
+                                            <span>Explore Now</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </article>
+</main>
+
+<script>
+    function setupShareButton(buttonId) {
+        const button = document.getElementById(buttonId);
+        button.addEventListener('click', () => {
+            const url = button.getAttribute('value');
+            navigator.clipboard.writeText(url).then(() => {
+                alert('URL copied successfully!');
+            }).catch(() => {
+                alert('Error copying URL to clipboard');
+            });
+        });
+    }
+
+    setupShareButton('sprite_flight');
+    setupShareButton('space_invader');
+    setupShareButton('snake_game');
+    setupShareButton('car_racing');
+    setupShareButton('maze_solver');
+    setupShareButton('go_ace');
+    setupShareButton('flappy_bird');
+    setupShareButton('wach_a_mole');
+    setupShareButton('tic_tac_toe');
+    setupShareButton('brick_breaker');
+    setupShareButton('wach_a_mole');
+
+</script>
+<!-- ! -------------------------------------    Games List  End ------------------------------------------- -->
+
+
+{% endblock %}

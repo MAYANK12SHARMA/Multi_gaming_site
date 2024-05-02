@@ -1,0 +1,66 @@
+
+{% extends 'developer/developer.html' %}
+{% load static %}
+{% block title %}Jatin Khetan {% endblock title %}
+{% block body %}
+<body className='snippet-body'>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile Card</title>
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+
+    <body>
+        <div class="card">
+            <div class="card__img">
+                <img src="{% static 'media/developer_photo/jatin.jpg' %}" alt="Jatin">
+            </div>
+            <div class="card__name">
+                <h2>Jatin Khetan</h2>
+            </div>
+            <div class="card__job">
+                <span>Website Designing</span>
+            </div>
+            <div class="card__link">
+                <a href="https://www.linkedin.com/in/jatin-khetan-130977299/">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="https://twitter.com/JatinKhetan446">
+                    <i class='bx bxl-twitter'></i>
+                </a>
+                <a href="https://www.facebook.com/jatin.khetan.79">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+                <a href="https://github.com/JK-asthetic">
+                    <i class='bx bxl-github'></i>
+                </a>
+            </div>
+            <div class="card__btn">
+                <a href="https://wa.me/+919412714387">
+                <button class="card__btn-contact">Contact me</button>
+                </a>
+            </div>
+        </div>
+    </body>
+    <script src="./assets/js/html.js"></script>
+
+    </html>
+    <script type='text/javascript'
+        src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js'></script>
+    <script type='text/javascript' src='#'></script>
+    <script type='text/javascript' src='#'></script>
+    <script type='text/javascript' src='#'></script>
+    <script type='text/javascript'>src='#'</script>
+    <script type='text/javascript'>var myLink = document.querySelector('a[href="#"]');
+        myLink.addEventListener('click', function (e) {
+            e.preventDefault();
+        });</script>
+
+</body>
+
+{% endblock body %}

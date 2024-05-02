@@ -1,0 +1,192 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body { 
+    background-color:rgb(0, 0, 0);
+    background-image: url('../GAME_IMAGES/Red.gif'); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    position: center;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    font-family: 'Poppins', sans-serif;
+}
+
+#title {
+    position: absolute;
+    top: 50px; 
+    left: 60px; 
+    color: rgb(205, 40, 40);
+    font-size: 23px; 
+}
+
+#tm {
+    position: absolute;
+    bottom: 5px;
+    right: 40px;
+    color: rgb(0, 0, 0);
+    font-size: 21px;
+}
+
+#view {
+    margin-top: 30px;
+}
+
+#mazeContainer {
+    top: 15px;
+    opacity: 0;
+    display: inline-block; 
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgb(212, 84, 84);
+    box-shadow: 12px 12px 20px 5px rgba(0, 0, 0, 0.5);
+} 
+
+#mazeContainer #mazeCanvas {
+    top: 15px;
+    margin: 0;
+    display: block;
+    border: solid 3px rgb(0, 0, 0); 
+    height: 600px;
+}
+
+#startMazeBtn,
+#diffSelect {
+    text-align: center;
+    margin: 1px 120px;
+    padding: 5px 16px;
+    background: #000000;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 28px;
+    font-weight: bolder;
+    border-color: yellow;
+    transition: background-color 0.6s, transform 0.3s, box-shadow 0.3s;
+    color: white;
+}
+
+#okBtn {
+    margin: 4px 55px;
+    padding: 5px 18px;
+    text-align: center;
+    border-radius: 15px;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 30px;
+    font-weight: bolder;
+    transition: background-color 0.6s, transform 0.3s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+#okBtn:hover {
+    background-color: #000000;
+    box-shadow: 2px 6px 6px 0px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+#okBtn:active {
+    transform: scaleY(0.58) scaleX(0.87);
+    
+}
+
+#diffSelect:hover {
+    background-color: #000000;
+    box-shadow: 10px 8px 14px 1px rgba(255, 0, 0, 0.5);
+}
+
+#startMazeBtn:hover {
+    background-color: #000000;
+    box-shadow: 10px 8px 14px 1px rgba(255, 0, 0, 0.5); 
+} 
+
+#startMazeBtn:active {
+    transform: scaleY(0.58) scaleX(0.87);
+}
+
+.custom-select {
+	display: inline-block;
+}
+.custom-select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: 125px center;
+}
+#Message-Container {
+    visibility: hidden;
+    color: rgb(179, 175, 175);
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.30);
+    z-index: 1;
+}
+#Message-Container #message {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+#page {
+	text-align: center;
+	height: auto;
+	width: auto;
+	margin: auto;
+}
+#page #menu {
+    margin: auto;
+    padding: 10px;
+    height: 65px;
+    box-sizing: border-box;
+}
+#page #menu h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 3.2rem;
+}
+#page #view {
+    position: absolute;
+    top: 65px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+}
+.border {
+    border: 10px black solid;
+    border-radius: 10px;
+}
+
+#instructions {
+    margin-top: 425px;
+    color: rgb(0, 0, 0);
+}
+ 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+	input, select {
+	    width: 120px;
+	}
+}

@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+    background-image: url('../GAME_IMAGES/brick1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#board {
+    background-color: black;
+    border-top: 10px solid rgb(62, 4, 71);
+    border-left: 5px solid rgb(62, 4, 71);
+    border-right: 5px solid rgb(62, 4, 71);
+    border-bottom: 10px solid rgb(62, 4, 71);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 50px;
+    background-image: url('../GAME_IMAGES/star.jpg');
+    height: 600px;
+}
+
+
+
+#musicButton {
+    background: linear-gradient(blue, red);
+    /* Button background color */
+    color: #fff;
+    /* Text color */
+    border: 6px double aquamarine;
+    /* Remove default button border */
+    padding: 5px 20px;
+    /* Padding inside the button */
+    font-size: 20px;
+    /* Font size */
+    border-radius: 10px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color change */
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-family: geneva;
+}

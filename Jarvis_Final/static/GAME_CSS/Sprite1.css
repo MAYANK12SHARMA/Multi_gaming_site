@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Creepster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+* {
+  margin : 0;
+  padding : 0;
+  box-sizing: border-box;
+} 
+
+body{
+  background-color: black;
+}
+
+#canvas1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid rgb(0, 0, 0);
+  max-width: 100%;
+  max-height: 100%;
+} 
+
+#player, #layer1, #layer2, #layer3, #layer4, #layer5, #enemy_fly, #enemy_plant, #enemy_spider_big, #fire, #boom, #life {
+  display: none;
+}
+
+.trademark-container {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  color: rgb(255, 255, 255); /* You can adjust color as needed */
+  font-size: 14px; /* Adjust font size as needed */
+}
+
+/* !play music button */
+#playButton {
+  padding: 10px 20px;
+  background-color: #1d1b1b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 120px;
+  right: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#playButton:hover {
+  background-color: whitesmoke;
+  color:rgb(0, 0, 0);
+}
+
+#playButton:active {
+  background-color: #000000;
+  transform: translateY(1px);
+  color: rgb(255, 255, 255);
+}
+
+/* !reset button */
+#resetButton {
+  padding: 10px 20px;
+  background-color: #1d1b1b; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 168px;
+  right: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#resetButton:hover {
+  background-color: whitesmoke;
+  color:rgb(0, 0, 0);
+}
+
+#resetButton:active { 
+  background-color: #000000;
+  transform: translateY(1px);
+  color: rgb(255, 255, 255);
+} 

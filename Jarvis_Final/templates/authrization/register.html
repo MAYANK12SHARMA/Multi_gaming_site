@@ -1,0 +1,117 @@
+{% load static %}
+
+{% load socialaccount %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="{% static 'CSS/register_css/signup.css' %}">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body style="background: url('{% static 'media/register/bglogin.png' %}') no-repeat center center/cover;">
+
+    <div class="login-section">
+        <div class="formbox">
+            <form action="{% url 'register_attempt' %}" method="POST">
+                {% csrf_token %}
+                <i class='bx bxs-user' id="usericon"></i>
+                <h2>Sign up</h2>
+                <div class="input-box">
+                    <span class="icon">
+                        <i class='bx bxs-user-detail'></i>
+                    </span>
+                    <input type="text" id="username" name="username" required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <i class='bx bxs-envelope'></i>
+                    </span>
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <i class='bx bxs-lock-alt'></i>
+                    </span>
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Password</label>
+                    <!-- Add more form elements here if needed -->
+                </div>
+
+
+                <div class="remember-password">
+                    <label for="remember"> <input type="checkbox" name="" id="remember">Remember Me </label>
+                </div>
+
+                <button type="submit" class="btn"> Sign up</button>
+
+                <div class="create-account">
+                    <p>Already have an Account ? <a href="{% url 'login_attempt' %}"> Sign in</a> </p>
+                    <div class="or">
+                        or Sign in with
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </form>
+
+        </div>
+        <div class="social_account">
+            <form action="{% provider_login_url 'google' %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" class="btn">
+                    <i class='bx bxl-google'></i>
+                </button>
+
+
+            </form>
+
+            <form action="{% provider_login_url 'github' %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" class="btn">
+                    <i class='bx bxl-github'></i>
+                </button>
+
+
+            </form>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        {% if messages %}
+        {% for message in messages %}
+        Swal.fire({
+            title: '{{ message.tags|capfirst }}',
+            text: '{{ message }}',
+            icon: '{{ message.tags }}',
+            background: '#1c1e25',
+            color: 'white',
+            confirmButtonColor: '#272a34',
+            iconColor: '#f39422',
+            confirmButtonText: 'OK',
+            allowOutsideClick: false,
+            allowEscapeKey: false
+        });
+        {% endfor %}
+        {% endif %}
+
+    </script>
+</body>
+
+</html>
+
+
+

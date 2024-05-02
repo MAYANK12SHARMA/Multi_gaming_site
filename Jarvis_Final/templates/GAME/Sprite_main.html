@@ -1,0 +1,64 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/GAME_CSS/Sprite2.css' %}">
+    <title>Sptite Flight Tutorial</title>
+
+    <script>
+        window.onload = function() {
+            document.body.style.zoom = "90%";
+        };
+    </script>
+</head>
+<body style="background-image: url('{% static 'GAME_IMAGES/Dog.jpg' %}')">
+
+    
+    <div class="game-container">
+        <br>
+        <div class="heading-container">
+            <pre><marquee scrollamount = 29><h1>Welcome To J.A.R.V.I.S ARENA</h1></pre></marquee>
+        </div>
+    </div>
+    <br>
+    <div class="message-container">
+        <br>
+        <pre><h1>SPRITE   FLIGHT</h1></pre>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="input-container">
+        <br>
+        <div class="players">
+            <pre><p>    Use 'WASD' keys to move.
+
+        Press 'J' to enable canis rage.
+
+            Press 'W' + 'S' to perform Dive Attack.
+
+                  Make minimum 25 points in 35 seconds.
+            </p></pre>
+        </div>
+        <br>
+        <button onclick="startGame()">Ready</button>
+    </div>
+
+
+    <script>
+        function startGame() {
+                window.open("{% url 'sprite1' %}", "_self");
+        
+        }
+
+        function changeBackgroundColor(input) {
+            input.style.backgroundColor = 'lightblue';
+        }
+    </script> 
+    <script src="{% static '/GAME_JS/mainScript.js' %}"></script>
+</body> 
+</html> 

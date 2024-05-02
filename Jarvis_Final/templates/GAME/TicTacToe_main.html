@@ -1,0 +1,145 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'GAME_CSS/TicTacToe2.css' %}">
+    <title>Tic Tac Toe</title>
+
+    <script>
+        window.onload = function() {
+            document.body.style.zoom = "80%";
+        };
+    </script>
+
+</head>
+<body style="background-image: url('{% static 'GAME_IMAGES/Purple.jpg' %}')">
+
+    
+    <div class="game-container">
+        <br>
+        <div class="heading-container">
+            <pre><marquee scrollamount="29"><h1>Welcome To J.A.R.V.I.S ARENA</h1></marquee></pre>
+        </div>
+    </div>
+
+    <div class="message-container">
+        <br>
+        <pre><h1>TIC TAC TOE</h1></pre>
+    </div>
+
+    <div class="input-container">
+        <br>
+        <div class="players">
+            <label id="player1" for="player1">Player 1 (X):</label>
+            <input type="text" id="input_player1" placeholder="Enter Name" oninput="changeBackgroundColor(this)">
+            <label id="player2" for="player2">Player 2 (O):</label>
+            <input type="text" id="input_player2" placeholder="Enter Name" oninput="changeBackgroundColor(this)">
+        </div>
+        <br>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+
+    {% csrf_token %}
+
+    <script>
+        function startGame() {
+            var player1Name = document.getElementById('input_player1').value;
+            var player2Name = document.getElementById('input_player2').value;
+
+            if (player1Name === '' || player2Name === '') {
+                alert('Please enter names for both players');
+                return;
+            }
+
+            // Store player names in sessionStorage to pass to the next page
+            sessionStorage.setItem('player1Name', player1Name);
+            sessionStorage.setItem('player2Name', player2Name);
+
+            // Open TicTacToe1.html in a new tab or window
+            window.open('{% url "TicTacToe1" %}', '_blank'); 
+        }
+
+        function changeBackgroundColor(input) {
+            input.style.backgroundColor = 'lightblue';
+        }
+    </script>
+    <!-- <script src="{% static 'GAME_JS/TicTacToe2.js' %}"></script>  -->
+    <script>
+        
+console.log("Welcome to Tic Tac Toe")
+let music = new Audio("{% static 'GAME_SOUNDS/music.mp3' %}");
+let audioTurn = new Audio("{% static 'GAME_SOUNDS/ting.mp3' %}");
+audioTurn.playbackRate = 1.5;
+let gameover = new Audio("{% static 'GAME_SOUNDS/gameover.mp3' %}");
+let turn = "X";
+let isgameover = false;
+
+
+//! Function to change the turn 
+const changeTurn = ()=>{
+    return turn === "X"? "O": "X"
+}
+
+//! Function to check for a win
+const checkWin = ()=>{
+    let boxtext = document.getElementsByClassName('boxtext'); 
+    let wins = [
+        [0, 1, 2, -1, 6, 0],
+        [3, 4, 5, -1, 18, 0],
+        [6, 7, 8, -1, 30, 0],
+        [0, 3, 6, -13, 18, 90],
+        [1, 4, 7, -1, 18, 90],
+        [2, 5, 8, 11, 18, 90],
+        [0, 4, 8, -1, 18, 45],
+        [2, 4, 6, -1, 18, 135],
+    ]
+    wins.forEach(e =>{
+        if((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText !== "") ){ 
+            document.querySelector('.info').innerText = boxtext[e[0]].innerText + " Won"
+            isgameover = true 
+            document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "340px";
+            document.querySelector(".line").style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`
+            document.querySelector(".line").style.width = "38vw";
+
+            //! The query selector returns the first child element that matches a specified selector(s) of an   element.
+        }
+    })
+}
+
+
+//!  Game Logic
+let boxes = document.getElementsByClassName("box"); 
+Array.from(boxes).forEach(element =>{
+    let boxtext = element.querySelector('.boxtext');
+    element.addEventListener('click', ()=>{
+        if(boxtext.innerText === ''){
+            boxtext.innerText = turn;
+            turn = changeTurn();
+            audioTurn.play();
+            checkWin(); 
+            if (!isgameover){
+                document.getElementsByClassName("info")[0].innerText  = "Turn of " + turn;
+            } 
+        }
+    })
+})
+
+
+//!  Onclick listener to reset button
+reset.addEventListener('click', ()=>{ 
+    let boxtexts = document.querySelectorAll('.boxtext');
+    Array.from(boxtexts).forEach(element => {
+        element.innerText = ""
+    });
+    turn = "X"; 
+    isgameover = false 
+    document.querySelector(".line").style.width = "0vw";
+    document.getElementsByClassName("info")[0].innerText  = "Turn of " + turn;
+    document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px" 
+})
+    </script>
+</body> 
+</html>
